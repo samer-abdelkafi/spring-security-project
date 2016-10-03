@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+
+<ui:composition template="../template/template.xhtml">
+	<ui:define name="body">
+		<f:view>
+			<a4j:form>
+				<rich:datascroller for="customers" />
+				<rich:dataTable cellpadding="0" cellspacing="0" border="0"
+					var="list" value="#{customer.customers}" style="text-align:center;"
+					width="100%" id="customers" rows="10">
+					<f:facet name="header">
+						<rich:columnGroup>
+							<rich:column colspan="6">
+								<h:outputText value="Client(s) found(s)" />
+							</rich:column>
+							<rich:column breakBefore="true">
+								<h:outputText value="Id" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Name" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Adresse" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="City" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="Phone" />
+							</rich:column>
+							<rich:column>
+								<h:outputText value="TaxId" />
+							</rich:column>
+						</rich:columnGroup>
+					</f:facet>
+					<rich:column sortBy="#{list.customerId}">
+						<h:outputText value="#{list.customerId}" />
+					</rich:column>
+					<rich:column sortBy="#{list.name}">
+						<h:outputText value="#{list.name}" />
+					</rich:column>
+					<rich:column filterEvent="onkeyup" filterBy="#{list.adresse}">
+						<h:outputText value="#{list.adresse}" />
+					</rich:column>
+					<rich:column filterEvent="onkeyup" filterBy="#{list.city}">
+						<h:outputText value="#{list.city}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="#{list.phone}" />
+					</rich:column>
+					<rich:column>
+						<h:outputText value="#{list.taxId}" />
+					</rich:column>
+				</rich:dataTable>
+			</a4j:form>
+		</f:view>
+	</ui:define>
+</ui:composition>
+
+</html>

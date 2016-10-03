@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+	
+
+
+<ui:composition template="../template/template.xhtml">
+  
+<ui:define name="body">
+ 
+<f:view >
+ 
+	<a4j:form>
+		<div style="width:350px;" >
+		
+		<a4j:outputPanel layout="block" id="msgAction" styleClass="#{customer.msg.msgType}" >
+			<h:outputText value="#{customer.msg.msgValue}" rendered="#{customer.msg.msgRendrer}"/>
+		</a4j:outputPanel>
+
+		
+		
+		<rich:panel>
+        <f:facet name="header">
+        	<h:outputText value="Edit Customer"/>
+        </f:facet>
+        <h:panelGrid columns="3" title="Customer" rowClasses="s1row" columnClasses="wfcol1,wfcol2,wfcol3">
+        <h:outputText value="Name: " />
+			<h:inputText value="#{customer.name}" id="name" required="true"/>
+			<rich:message for="name" />
+			
+			<h:outputText value="Phone: " />
+			<h:inputText value="#{customer.phone}" id="phone" required="true"/>
+			<rich:message for="phone" />
+			
+			<h:outputText value="Address: " />
+			<h:inputText value="#{customer.adresse}" id="adresse" required="true"/>
+			<rich:message for="adresse" />
+			
+			<h:outputText value="TaxId: " />
+			<h:inputText value="#{customer.taxId}" id="taxId" required="true">
+				<f:validateLongRange minimum="0" maximum="100"/>
+			</h:inputText>
+			<rich:message for="taxId" />
+			
+			<h:outputText value="City: " />
+			<h:inputText value="#{customer.city}" id="city" required="true"/>
+			<rich:message for="city" />
+			
+			<h:outputText value="State: " />
+			<h:inputText value="#{customer.state}" id="state" required="true"/>
+			<rich:message for="state" />
+			
+			<h:outputText value="Zip: " />
+			<h:inputText value="#{customer.zip}" id="zip" required="true">
+				<f:validateLongRange minimum="0" maximum="9999"/>
+			</h:inputText>
+			<rich:message for="zip" />
+			
+			<f:facet name="footer"> 
+				<a4j:commandButton action="#{customer.save}"  value="save" reRender="msg,msgAction"/>
+			</f:facet>
+			</h:panelGrid>
+    	</rich:panel>
+    	</div>
+    	
+			
+				
+	</a4j:form>
+	
+</f:view>
+
+</ui:define>	
+</ui:composition>
+
+</html>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/43/trunk/myApp_Security/src/main/webapp/WEB-INF
+END
+.faces-config.xml.jsfdia
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/6/trunk/myApp_Security/src/main/webapp/WEB-INF/.faces-config.xml.jsfdia
+END
+faces-config.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/38/trunk/myApp_Security/src/main/webapp/WEB-INF/faces-config.xml
+END
+springsecurity.taglib.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/27/trunk/myApp_Security/src/main/webapp/WEB-INF/springsecurity.taglib.xml
+END
+web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/43/trunk/myApp_Security/src/main/webapp/WEB-INF/web.xml
+END

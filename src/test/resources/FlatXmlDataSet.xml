@@ -1,0 +1,26 @@
+<!DOCTYPE dataset SYSTEM "src/test/resources/my-dataset.dtd">
+<dataset>
+	<customer customer_id="1" tax_id="2" name="name1" adresse="adresse1"
+		city="Paris" state="Paris" zip="75001" phone="0606060606" />
+	<customer customer_id="2" tax_id="3" name="name2" adresse="adresse2"
+		city="Paris" state="Paris" zip="75002" phone="0606060607" />
+	<customer customer_id="3" tax_id="4" name="name3" adresse="adresse3"
+		city="Paris" state="Paris" zip="75003" phone="0606060608" />
+
+	<customer_order order_id="1" customer_id="1"
+		date_placed="2008-01-01" date_promised="2008-02-02" terms="terms"
+		status="done" />
+	<customer_order order_id="2" customer_id="2"
+		date_placed="2009-02-02" date_promised="2009-04-20" terms="terms"
+		status="done" />
+	<customer_order order_id="3" customer_id="2"
+		date_placed="2010-03-03" date_promised="2010-05-24" terms="terms"
+		status="done" />
+	<customer_order order_id="4" customer_id="3"
+		date_placed="2008-04-04" date_promised="2008-07-05" terms="terms"
+		status="done" />
+
+	<user user_id="1" name="admin name" login="admin" password="admin"
+		enabled="true" />
+
+</dataset>
